@@ -9,21 +9,22 @@ namespace SistemaRecebimento.Controllers
 {
     public class CadastroController : Controller
     {
-       private static List<GrupoProdutoModel> _listaGrupoProduto = new List<GrupoProdutoModel>()
+        private static List<GrupoProdutoModel> _listaGrupoProduto = new List<GrupoProdutoModel>()
         {
-            new GrupoProdutoModel() { Id=1, Nome="Livros", Ativo=true },
-            new GrupoProdutoModel() { Id=2, Nome="Mouses", Ativo=true },
-            new GrupoProdutoModel() { Id=3, Nome="Monitores", Ativo=false }
+            new GrupoProdutoModel() { Id=1, Nome="Livros", Quantidade=3 },
+            new GrupoProdutoModel() { Id=2, Nome="Mouses", Quantidade=2 },
+            new GrupoProdutoModel() { Id=3, Nome="Monitores", Quantidade=1 }
         };
+
+        [Authorize]
+        public ActionResult GrupoProduto()
+        {
+            return View(GrupoProdutoModel.RecuperarLista(null));
+        }
         [Authorize]
         public ActionResult GrupoCliente()
         {
             return View();
-        }
-        [Authorize]
-        public ActionResult GrupoProduto()
-        {
-            return View(_listaGrupoProduto);
         }
     }
 }

@@ -20,4 +20,8 @@ namespace SistemaRecebimento.Models
         [Display(Name = "Lembrar Me")]
         public bool LembrarMe { get; set; }
     }
+    public class ProdutoViewModel
+    {
+       
+    }
 }

@@ -23,12 +23,26 @@ textarea {
     max-width: 280px;
 }
 
-.containerlogin {
-    width: 400px;
+.menu {
+    width: 90%;
     margin: 0 auto;
 }
-
+.login {
+    width: 400px;
+    left: 50px;
+    margin: 0 auto;
+}
+.tabela {
+    width: 100%;
+    margin: 0 auto;
+}
 .titulo {
     margin-bottom: 30px;
     text-transform: uppercase;
 }
+
+.invisivel {
+    display: none;
+}
+
+
