@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -24,6 +25,11 @@ namespace SistemaRecebimento.Models
                 }
             }
             return ret;
+        }
+
+        internal static object ListaUsuario(object p)
+        {
+            throw new NotImplementedException();
         }
     }
 }
