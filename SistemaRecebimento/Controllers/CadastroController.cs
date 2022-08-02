@@ -15,7 +15,11 @@ namespace SistemaRecebimento.Controllers
             new GrupoProdutoModel() { Id=2, Nome="Mouses", Quantidade=2 },
             new GrupoProdutoModel() { Id=3, Nome="Monitores", Quantidade=1 }
         };
-
+        private static List<GrupoProdutoModel> _listaFormapagamento = new List<GrupoProdutoModel>()
+        {
+            new GrupoProdutoModel() { Id=1, Tipo="CREDITO",Min= 1, Max= 12 },
+            new GrupoProdutoModel() { Id=2, Tipo="DEBITO",Min= 1, Max= 1 },
+        };
         [Authorize]
         public ActionResult GrupoProduto()
         {
@@ -68,8 +72,10 @@ namespace SistemaRecebimento.Controllers
                     resultado = "ERRO";
                 }
             }
-
+            
             return Json(new { Resultado = resultado, Mensagens = mensagens, IdSalvo = idSalvo });
+          
+
         }
     }
 }

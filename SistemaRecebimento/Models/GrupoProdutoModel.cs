@@ -15,6 +15,10 @@ namespace SistemaRecebimento.Models
         public int Quantidade { get; set; }
         public DateTime Datahoracriacao { get; set; }
 
+        public string Tipo { get; set; }
+        public int Min { get; set; }
+        public int Max { get; set; }
+
         public static List<GrupoProdutoModel> RecuperarLista(string consulta)
         {
             var ret = new List<GrupoProdutoModel>();
